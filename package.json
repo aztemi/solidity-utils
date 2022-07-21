@@ -1,0 +1,31 @@
+{
+  "name": "@aztemi/solidity-utils",
+  "version": "1.0.0",
+  "description": "Utility extensions for solidity smart contracts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aztemi/solidity-utils.git"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "extension",
+    "utils",
+    "aztemi"
+  ],
+  "author": "aztemi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aztemi/solidity-utils/issues"
+  },
+  "homepage": "https://github.com/aztemi/solidity-utils#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "hardhat": "^2.10.1"
+  }
+}

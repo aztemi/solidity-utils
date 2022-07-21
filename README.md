@@ -1,2 +1,3 @@
 # solidity-utils
-Utility libraries for solidity smart contracts
+
+Utility extensions for solidity smart contracts
