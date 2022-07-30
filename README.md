@@ -12,7 +12,7 @@ It randomly generates number IDs. It can be used to assign token IDs for a rando
 
 **Usage:**
 
-```
+```solidity
 // Step 1. Import the RandomIDsGenerator contract
 import "@aztemi/solidity-utils/contracts/RandomIDsGenerator.sol";
 
