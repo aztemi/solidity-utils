@@ -11,19 +11,19 @@ abstract contract RandomIDsGenerator {
   uint256 remain = 0; // number of IDs remaining
   mapping(uint256 => uint256) taken; // list of IDs already assigned
 
-  constructor(uint256 _amount) {
-    remain = _amount;
+  constructor(uint256 amount) {
+    remain = amount;
   }
 
-  function random(uint256 _modulus) internal view returns (uint256) {
+  function _random(uint256 modulus) internal view returns (uint256) {
     // 1 added since uint256 cast is a rounddown operation
-    return (1 + uint256(keccak256(abi.encodePacked(block.timestamp, msg.sender, _modulus))) % _modulus);
+    return (1 + uint256(keccak256(abi.encodePacked(block.timestamp, msg.sender, modulus))) % modulus);
   }
 
   // get the next random ID
-  function nextID() internal returns (uint256) {
+  function _nextID() internal returns (uint256) {
     assert(remain > 0);
-    uint256 id = random(remain);
+    uint256 id = _random(remain);
     uint256 value = taken[id];
 
     while (value > 0) {
@@ -39,7 +39,7 @@ abstract contract RandomIDsGenerator {
   }
 
   // number of IDs remaining
-  function remainingSupply() internal view returns (uint256) {
+  function _remainingSupply() internal view returns (uint256) {
     return remain;
   }
 }
